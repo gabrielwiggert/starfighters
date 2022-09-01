@@ -1,11 +1,11 @@
 import cors from 'cors'
 import express from 'express'
-import * as operacoesController from './controllers/operacoesController'
+import * as rankingController from './controllers/rankingController.js'
 
 const app = express()
 app.use(cors())
 
-app.get('/soma/:numero', operacoesController.fazerSoma)
+app.get('ranking', rankingController.getRanking)
 
 const PORT: number = 5000
 
